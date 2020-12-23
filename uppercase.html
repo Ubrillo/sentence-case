@@ -1,0 +1,31 @@
+
+<script>
+
+function titleCase(str) {
+   
+   let wordsplit = str.split(' ');
+   //console.log(wordsplit);
+
+  let holdcaseup;
+  let holdcasedown;
+  let wordstore; 
+
+  for (let i=0; i < wordsplit.length; i++){
+    
+   holdcaseup = wordsplit[i][0].toUpperCase();
+
+    for (let n=1; n < wordsplit[i].length; n++){
+    let bit;
+    bit = wordsplit[i][n].toLowerCase();
+    holdcasedown = holdcasedown + bit;
+
+      }
+   wordstore = wordstore + ' ' + holdcaseup + holdcasedown;
+   holdcasedown = '';
+  }
+
+return wordstore;
+}
+console.log(titleCase("I'm a little tea pot"));
+
+</script>
